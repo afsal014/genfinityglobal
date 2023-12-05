@@ -1,33 +1,127 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width initial-scale=1">
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="./src/TimeCircles.js"></script>
-    <link href="./src/TimeCircles.css" rel="stylesheet">
-
-    <title>Genfinity Global</title>
-    <link rel="icon" href="./assets/images/gg_logo.jpg">
-    <meta name="theme-color" content="#0a131a">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    
 </head>
 
 <body>
-<div class="container">
-    <div class="logo-placeholder">
-        <img src="./assets/images/gg_logo.jpg" alt="logo" class="logo">
-        <h1>Our new website is coming soon</h1>
+
+    <div id="cursor"></div>
+
+    <div id="main">
+        <div id="navBar" class="navbar" style="background-color: transparent;">
+            <div class="container" style="display: flex; justify-content: center; align-items: center;">
+                <div class="nav-holder p-0">
+                    <a href="/" style="font-weight: bold;"><img class="logo" src="./Frontend/public/Logo/GG_Logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" aria-controls="basic-navbar-nav">
+                        <span style="color: black;" class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="link-holder">
+                        <a href="/admin" class="navigation-links">Home</a>
+                        <a href="/admin" class="navigation-links">Events</a>
+                        <a href="/admin" class="navigation-links">Upcoming</a>
+                        <a href="/admin" class="navigation-links">About Us</a>
+                        <a href="/admin" class="navigation-links">Community</a>
+                        <a href="/admin" class="navigation-links">Contact us</a>
+                        <a style="margin-top: .3rem; margin-left: 3rem;" role="button" id="globalnav-menubutton-link-search" class="globalnav-link globalnav-link-search"
+                            data-topnav-flyout-trigger-regular="" data-topnav-flyout-trigger-compact="" aria-label="Search apple.com"
+                            aria-expanded="false" data-analytics-title="open - search field"><span class="globalnav-image-compact"><svg
+                            height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z">
+                            </path>
+                        </svg></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- page1  -->
+        <div id="page1">
+            <h1 data-scroll data-scroll-speed="2">INNOVATION </h1>
+            <h3 data-scroll data-scroll-speed="1">IS THE OFFSPRING OF COLLABORATION</h3>
+            <h2 data-scroll data-scroll-speed="1">HERE IS YOUR</h2>
+            <h1 data-scroll data-scroll-speed="0" style="letter-spacing: 1.4rem;">PLATFORM</h1>
+            <!-- <div id="video-container">
+                <div id="play">PLAY</div>
+                <video autoplay muted loop src="./video.mp4"></video>
+            </div> -->
+        </div>
+
+        <div id="pageOne">
+            <div class="bg-holder">
+                <div class="bg-one">
+                    <img src="" alt="">
+                </div>
+                <div class="bg-one">
+                    <img style="width: 100%; object-fit: cover;" src="https://news.microsoft.com/source/wp-content/uploads/2023/11/4-misconceptions-ai.jpg" alt="">
+                </div>
+                <div class="bg-one">
+                    <img src="https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601_original.jpg" alt="">
+                </div>
+            </div>
+            <div id="page1">
+                <div id="video-container">
+                    <div id="play">PLAY</div>
+                    <video autoplay muted loop src="./video.mp4"></video>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- page2  -->
+        <!-- <div id="page2">
+            <div id="element1" class="element">
+                <img data-scroll data-scroll-speed="2"
+                    src="https://cdn.sanity.io/images/w8f1ak3c/production/ee1c2e8894a4c47c4f4ce71b8973589f8a5045b2-902x1500.png/Rectangle%203.png?rect=1,0,900,1500&w=640&h=1067&fit=min&auto=format"
+                    alt="">
+                <div data-scroll data-scroll-speed="-2" class="box"></div>
+            </div>
+            <div id="element2" class="element">
+                <img data-scroll data-scroll-speed="2"
+                    src="https://cdn.sanity.io/images/w8f1ak3c/production/bb84b7106e978c37f5aa92c8d5781751b2e9d9f2-900x1500.png/Rectangle%202.png?w=640&h=1067&auto=format"
+                    alt="">
+                <div data-scroll data-scroll-speed="-2" class="box"></div>
+            </div>
+            <div id="element3" class="element">
+                <img data-scroll data-scroll-speed="2"
+                    src="https://cdn.sanity.io/images/w8f1ak3c/production/d3151106849ff2494d66916cf554c68a0603444d-902x1500.png/Rectangle%20220.png?rect=1,0,900,1500&w=640&h=1067&fit=min&auto=format"
+                    alt="">
+                <div data-scroll data-scroll-speed="-2" class="box"></div>
+            </div>
+        </div> -->
+
+        <!-- page3  -->
+        <!-- <div id="page3">
+            <div class="child" id="child1">
+                <img src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format"
+                    alt="">
+            </div>
+            <div class="child" id="child2">
+                <img src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format"
+                    alt="">
+            </div>
+            <div class="child" id="child3">
+                <img src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format"
+                    alt="">
+            </div>
+            <div class="child" id="child4">
+                <img src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format"
+                    alt="">
+            </div>
+        </div> -->
     </div>
-    <div class="content">
-        <p class="remove-top-margin">Our website is currently undergoing updates. Thank you for your patience. For any inquiries, please email us at <a href="mailto:info@genfinityglobal.com"> info@genfinityglobal.com</a></p>
-
-          </div>
-
-</div>
-</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>

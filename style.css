@@ -1,64 +1,265 @@
-body {
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
-  max-width: 670px;
-  width: 100%;
-  margin: 10px auto;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 300;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gilory';
+}
+
+*::selection {
   color: white;
-  background: linear-gradient(20deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)),
-    url("https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=92b4ef70a4e06a7e7bf54e1bde61b624&auto=format&fit=crop&w=1950&q=80")
-      no-repeat center center fixed;
+  background-color: black;
 }
 
-.remove-top-margin {
-  margin-top: 0;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
+
+.navbar{
+ padding-top: 2rem;
+}
+
 .logo {
-  border-radius: 50%;
-  max-width: 150px;
-  max-height: 180px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-left: 1rem;
 }
 
-.logo-placeholder {
-  padding: 5px;
-  text-align: center;
-}
-
-.content {
-  padding: 0 20px 20px 20px;
+.link-holder{
+  width: 80%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  font-size: 22px;
 }
 
-.content a {
-  background-color: #fff;
+.nav-holder {
+  width: 80%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(241, 241, 241);
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-links {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--r-globalnav-color);
+  position: relative;
+  z-index: 1;
+  padding: 0 calc(8px / var(--r-globalnav-text-zoom-scale, 1));
+  height: 44px;
+  background: no-repeat;
   text-decoration: none;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline-offset: -7px;
+  transition: color .32s cubic-bezier(.4, 0, .6, 1);
+  cursor: pointer;
 }
 
-.counter {
-  width: 500px;
+#cursor {
+  height: 150px;
+  width: 150px;
+  background-color: gray;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .counter {
-    width: 450px;
+#page1 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 3vh;
+  padding-top: 15vh;
+}
+
+.bg-holder {
+  width: 100%;
+  height: 200vh;
+  background-color: green;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.bg-one{
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+}
+
+#page1 h1 {
+  font-family: futura;
+  font-size: 20vh;
+  text-transform: uppercase;
+  line-height: 25vh;
+  letter-spacing: -8px;
+}
+
+#page1 h3{
+  font-family: futura;
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+}
+
+#page1 h2{
+  font-family: futura;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 53px;
+}
+#page1 h1,
+#page1 h2,
+#page1 h3 {
+  font-family: futura;
+  text-transform: uppercase;
+  /* Other existing styles */
+
+  /* Apply text shadow */
+  text-shadow: 13px 0px 8px rgba(0, 0, 0, 0.5);
+  /* Adjust the values as needed */
+}
+
+#video-container {
+  width: 100%;
+  height: 100vh;
+  background-color: gray;
+  margin-top: 1vh;
+}
+
+#video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+#video-container #play {
+  position: fixed;
+  padding: 3vw 2.5vw;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  background-color: black;
+  z-index: 9;
+  border-radius: 50%;
+  color: white;
+  font-family: futura;
+  opacity: 0;
+  scale: 0;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 2vw;
+}
+
+#page2 .element {
+  height: 100%;
+  width: 30%;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#page2 .element img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.2;
+}
+
+#page2 .element .box {
+  height: 50px;
+  width: 80%;
+  position: absolute;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.536);
+  border-radius: 20px;
+}
+
+#page3 {
+  width: 100%;
+  min-height: 120vh;
+  /* background-color: #f7f7f7; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.child {
+  height: 55vh;
+  width: 40vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child img {
+  height: 100%;
+}
+
+
+/******************** midea screens *******************/
+
+@media (max-width:600px) {
+
+  #page1 h1 {
+    font-family: futura;
+    font-size: 7vh;
+    text-transform: uppercase;
+    line-height: 8vh;
+    letter-spacing: -6px;
   }
-}
+  #page1 h3 {
+    font-family: futura;
+    font-size: 2vh;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+  }
 
-/*
-          ##Device = Most of the Smartphones Mobiles (Portrait)
-          ##Screen = B/w 320px to 479px
-        */
+  #video-container {
+    width: 100%;
+    height: 25vh;
+  }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .counter {
-    width: 350px;
+  #page1 {
+    min-height: 60vh;
+    width: 100%;
+    position: relative;
+    padding: 1vh;
+    padding-top: 25vh;
+  }
+
+  #page2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 2vw;
+    flex-direction: column;
   }
 }
