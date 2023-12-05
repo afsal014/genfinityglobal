@@ -72,11 +72,11 @@ function headingAnimation() {
 // Function to create popping-down animation
 function poppingDownAnimation() {
   gsap.from("#navBar", {
-    y: -50, // Set the initial position above the element's default position
-    opacity: 0, // Initial opacity
+    y: -50, 
+    opacity: 0, 
     delay: 1.3,
-    duration: 1.5, // Animation duration
-    ease: "power4.out", // Easing function for the animation
+    duration: 1.5, 
+    ease: "power4.out", 
   });
 }
 
@@ -87,6 +87,25 @@ document.addEventListener("mousemove", function (dets) {
     top: dets.y
   })
 });
+function addScrollListenerToPageOne() {
+  // Select the #bg-one element
+  const bgOne = document.getElementById('bg-one');
+
+  // Add a scroll event listener to the window
+  window.addEventListener("scroll", function () {
+    gsap.to(bgOne, {
+      opacity: 0, // Change opacity to hide
+      duration: 1, // Duration of the animation
+      ease: "power4.out"
+    });
+    bgOne.style.display = "none"
+  });
+
+}
+
+// Call the function to add scroll listener to pageOne
+addScrollListenerToPageOne();
+
 
 // document.querySelector("#child1").addEventListener('mouseenter',function(){
 //   gsap.to("#cursor",{
@@ -116,8 +135,28 @@ function cursorAnimation() {
   })
 }
 
+function animateBackgground(){
+  // Register ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger);
 
-videoSectionAnimation();
+  console.log("its eoks");
+
+  // Define the animation
+  gsap.to("#bg-one", {
+    scrollTrigger: {
+      trigger: "#pageOne",
+      start: "top top",
+      end: "bottom top",
+      scrub: true // Adjusts the speed of the animation relative to the scroll distance
+    },
+    opacity: 0, // Change this value as needed
+    duration: 1 // Change the duration of the animation as needed
+  });
+
+}
+
+// videoSectionAnimation();
 headingAnimation();
 cursorAnimation();
 poppingDownAnimation();
+// animateBackgground()
