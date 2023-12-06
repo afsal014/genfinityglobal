@@ -37,7 +37,6 @@ function locomotiveAnimation() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 }
-locomotiveAnimation();
 
 function navbarAnimation() {
   gsap.to("#nav-part1 svg", {
@@ -62,7 +61,6 @@ function navbarAnimation() {
     },
   });
 }
-navbarAnimation()
 
 function videoconAnimation() {
   var videocon = document.querySelector("#video-container");
@@ -86,7 +84,6 @@ function videoconAnimation() {
     });
   });
 }
-videoconAnimation();
 
 function cursorAnimation() {
   document.addEventListener("mousemove", function (dets) {
@@ -165,3 +162,9 @@ function headingAnimation() {
 headingAnimation();
 poppingDownAnimation();
 cursorAnimation();
+navbarAnimation();
+videoconAnimation();
+locomotiveAnimation();
+
+
+
