@@ -64,6 +64,46 @@ function navbarAnimation() {
 }
 navbarAnimation()
 
+function imageBackAmination() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const imageOne = document.querySelector("#image-One");
+
+  gsap.to(imageOne, {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#pageOne",
+      scroller: "#main",
+      start: "top 0",
+      end: "bottom 80%",
+      scrub: true,
+      onUpdate: (self) => {
+        const opacityValue = 1 - self.progress; // Update opacity based on scroll progress
+        gsap.to(imageOne, { opacity: opacityValue, duration: 0.5, ease: "power2.inOut" });
+      },
+    },
+  });
+
+  // gsap.to("#image-two", {
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: "#pageOne",
+  //     scroller: "#main",
+  //     start: "top 0",
+  //     end: "bottom 100%",
+  //     scrub: true,
+  //     onUpdate: (self) => {
+  //       const opacityValue = self.progress;
+  //       gsap.to("#image-two", { opacity: opacityValue, duration: 0.3 });
+  //     },
+  //   },
+  // });
+
+
+}
+// imageBackAmination()
+
+
 function videoconAnimation() {
   var videocon = document.querySelector("#video-container");
   var playbtn = document.querySelector("#play");
@@ -138,6 +178,14 @@ function headingAnimation() {
     stagger: 0.3,
   })
 
+  gsap.from("#page1 h4", {
+    y: 100,
+    opacity: 0,
+    delay: 0.8,
+    duration: 1,
+    stagger: 0.3,
+  })
+
   gsap.from("#page1 h3", {
     y: 100,
     opacity: 0,
@@ -162,6 +210,47 @@ function headingAnimation() {
   })
 }
 
+
+const text = `WE DO ORGANIZE THE EVENTS.`;
+let index = 0;
+
+function typeWriter() {
+  document.getElementById('typing-text').textContent = text.slice(0, index);
+  index++;
+
+  if (index <= text.length) {
+    setTimeout(typeWriter, 800); // Change delay here (in milliseconds)
+  }
+}
+
+// Start typing effect on page load
+window.onload = function () {
+  // typeWriter();
+};
+
+function subTitlesAnimation(entries =[], observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      gsap.from("#subtitle h3", {
+        y: 100,
+        opacity: 0,
+        delay: 0.5,
+        duration: 1,
+        stagger: 0.3,
+      });
+      observer.disconnect(); // Stop observing once animation starts
+    }
+  });
+}
+
+const options = {
+  threshold: 0.5 // Adjust this value based on when you want the effect to trigger
+};
+
+const observer = new IntersectionObserver(subTitlesAnimation, options);
+observer.observe(document.getElementById('subtitle'));
+
+subTitlesAnimation()
 headingAnimation();
 poppingDownAnimation();
 cursorAnimation();
