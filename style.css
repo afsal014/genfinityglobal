@@ -318,7 +318,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   width: 100%;
 }
 
@@ -501,6 +502,18 @@ body {
 
   .title-Holder {
     padding: 1rem;
+  }
+
+  #page2 {
+    height:50vh;
+  }
+
+  #footer{
+    margin-top: 28rem;
+  }
+
+  .we-do{
+    margin-top: 15rem;
   }
 }
 
