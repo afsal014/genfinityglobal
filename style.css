@@ -166,42 +166,44 @@ body {
 
 #page1 h1 {
   font-family: futura;
-  font-size: 20vh;
+  font-size: 17vh;
   text-transform: uppercase;
   line-height: 25vh;
-  letter-spacing: -8px;
+  letter-spacing: -1px;
+}
+
+#page1 h4 {
+  font-family: futura;
+  font-size: 17vh;
+  text-transform: uppercase;
+  line-height: 25vh;
+  letter-spacing: 1.7rem;
 }
 
 #page1 h3 {
   font-family: futura;
-  font-size: 45px;
+  font-size: 41px;
   text-transform: uppercase;
   letter-spacing: 0px;
 }
 
 #page1 h2 {
   font-family: futura;
-  font-size: 50px;
+  font-size: 38px;
   text-transform: uppercase;
-  letter-spacing: 53px;
+  letter-spacing: 51px;
 }
 
 #page1 h1,
 #page1 h2,
-#page1 h3 {
+#page1 h3, 
+#page1 h4 {
   font-family: futura;
   text-transform: uppercase;
   text-shadow: 13px 0px 8px rgba(0, 0, 0, 0.5);
 
 }
 
-.pageOne{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 150vh;
-  background-color: #000;
-}
 
 #video-container {
   height: 100vh;
@@ -265,7 +267,7 @@ body {
   width: 70%;
   position: absolute;
   z-index: 9;
-  background-color: rgb(229, 156, 186);
+  background-color: rgba(0, 0, 0, 0.579);
 
 
 }
@@ -295,6 +297,49 @@ body {
   height: 100%;
 }
 
+.subtitle{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+  margin-top: 2rem;
+
+}
+
+#subtitle h3{
+  font-size: 5vh;
+  font-family: futura;
+  text-transform: uppercase;
+  text-shadow: 13px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.title-Holder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  height: 200px;
+}
+
+#typing-text {
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1s steps(40, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
 
 @media (max-width:600px) {
 
@@ -353,16 +398,25 @@ body {
 
   #page1 {
     /* background-color: red; */
-    min-height: 70vh;
+    min-height: 110vh;
     width: 100%;
     padding: 0 3vw;
     padding-top: 25vh;
 
   }
+  #page1 h4 {
+    font-family: futura;
+    font-size: 6vh;
+    text-transform: uppercase;
+    line-height: 7vh;
+    letter-spacing: .8rem;
+    margin-bottom: 7rem;
+  }
 
   #page1 h1 {
-    font-size: 15.5vw;
-    letter-spacing: -3px;
+    line-height: 7vh;
+    font-size: 12vw;
+    letter-spacing: 0px;
   }
 
   #video-container {
@@ -407,7 +461,7 @@ body {
     width: 70%;
     position: absolute;
     z-index: 9;
-    background-color: rgb(229, 156, 186);
+    background-color: rgba(0, 0, 0, 0.73)
 
   }
 
@@ -437,6 +491,15 @@ body {
     height: 100%;
   }
 
+  .title-Holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem; */
+    width: 100%;
+    height: 200px;
+    margin-top: 12rem;
+  }
 }
 
 @media (max-width : 860px){
@@ -451,13 +514,13 @@ body {
     padding-top: 25vh;
   }
 
-  #page1 h1 {
+  /* #page1 h1 {
     font-family: futura;
     font-size: 12vh;
     text-transform: uppercase;
     line-height: 15vh;
     letter-spacing: 0px;
-  }
+  } */
 
   #page1 h3 {
     font-family: futura;
@@ -478,14 +541,11 @@ body {
   .navigate{
     display: none;
   }
+  #play{
+    display: none;
+  }
 
-    #page1 {
-      height: 80vh;
-      padding: 25vh 3vw 0;
-      /* Adjusted padding values: top: 25vh, right/left: 3vw, bottom: 0 */
-    }
-
-  #page1 h1 {
+  /* #page1 h1 {
     font-family: futura;
     font-size: 12vh;
     text-transform: uppercase;
@@ -505,16 +565,16 @@ body {
     font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 30px;
-  }
+  } */
 }
 
-@media (max-width : 960px){
+/* @media (max-width : 960px){
 
   #page1 {
-    min-height: 80vh;
+    min-height: 50vh;
     width: 100%;
     padding: 0 3vw;
-    padding-top: 18vh;
+    padding-top: 35vh;
   }
 
   #page1 h1 {
@@ -538,4 +598,4 @@ body {
     text-transform: uppercase;
     letter-spacing: 30px;
   }
-}
+} */
