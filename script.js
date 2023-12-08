@@ -250,7 +250,7 @@ const options = {
 const observer = new IntersectionObserver(subTitlesAnimation, options);
 observer.observe(document.getElementById('subtitle'));
 
-subTitlesAnimation()
+subTitlesAnimation();
 headingAnimation();
 poppingDownAnimation();
 cursorAnimation();
