@@ -357,6 +357,15 @@ body {
   /* Adjust the background color and opacity */
 }
 
+#sub-name-holder {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -542,14 +551,24 @@ body {
   #gen-dis{
     margin-top: -5rem;
   }
-  
+
   .p-blurred-background{
-    overflow: hidden;
-    overflow-y: auto;
+    height: 90%;
+  }
+  #p-blurred-background{
+    height: 60%;
   }
 
   .trdCard{
     margin-top: 1rem;
+    height: 90vh;
+  }
+  #sub-name-holder{
+    height: 0;
+  }
+
+  .hide{
+    display: none;
   }
 }
 
