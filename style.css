@@ -353,7 +353,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: end;
-  height: 50%;
+  height: 60%;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   /* Adjust the blur amount as needed */
@@ -553,7 +553,7 @@ body {
   }
 
   #gen-dis{
-    margin-top: -5rem;
+    margin-top: 6rem;
   }
 
   .p-blurred-background{
@@ -573,6 +573,10 @@ body {
 
   .hide{
     display: none;
+  }
+
+  .row-hol{
+    padding-top: 5rem;
   }
 }
 
