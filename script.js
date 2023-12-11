@@ -126,7 +126,7 @@ function videoconAnimation() {
     });
   });
 }
-videoconAnimation();
+// videoconAnimation();
 
 function cursorAnimation() {
   document.addEventListener("mousemove", function (dets) {
@@ -248,7 +248,7 @@ const options = {
 };
 
 const observer = new IntersectionObserver(subTitlesAnimation, options);
-observer.observe(document.getElementById('subtitle'));
+// observer.observe(document.getElementById('subtitle'));
 
 subTitlesAnimation();
 headingAnimation();
