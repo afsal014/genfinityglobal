@@ -209,6 +209,13 @@ body {
 
 }
 
+#gen-dis {
+  font-size: 40px;
+  letter-spacing: 0px;
+  font-family: futura;
+  text-transform: uppercase;
+  text-shadow: 13px 0px 8px rgba(0, 0, 0, 0.5);
+}
 
 #video-container {
   height: 100vh;
@@ -367,7 +374,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 2rem;
-  margin-top: 5rem;
+  margin-top: -8rem;
 }
 
 @keyframes typing {
@@ -552,9 +559,9 @@ body {
     margin-top: 15rem;
   }
 
-  #gen-dis{
-    margin-top: 6rem;
-  }
+  /* #gen-dis{
+    margin-top: 8rem;
+  } */
 
   .p-blurred-background{
     height: 90%;
@@ -569,6 +576,7 @@ body {
   }
   #sub-name-holder{
     height: 0;
+    margin-top: 12rem;
   }
 
   .hide{
@@ -576,7 +584,7 @@ body {
   }
 
   .row-hol{
-    padding-top: 5rem;
+    padding-top: 8rem;
   }
 }
 
