@@ -395,6 +395,15 @@ textarea:valid+label {
     width: 100px;
     height: 100px;
   }
+
+  body{
+    overflow-x: hidden;
+  }
+
+  .choosSection{
+    margin-top: -10rem;
+    margin-bottom: 5rem;
+  }
 }
 
 
