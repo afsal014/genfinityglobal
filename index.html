@@ -51,18 +51,31 @@
 	<script>
 		AOS.init();
 	</script>
-
 </head>
 
 <body id="main" style="width: 100%;">
-	<nav class="navbar navbar-expand-lg navbar-dark" style="position: fixed;top: 0;z-index: 9; width: 100%;">
-		<a class="navbar-brand" href="#"><img width="100px" src="./images/logos/GG WHITE.png" alt=""></a>
+	<nav id="navbarOne" class="navbar navbar-expand-lg navbar-dark" style="position: fixed;top: 0;z-index: 9; width: 100%;">
+		<a class="navbar-brand" href="#"><img  width="100px" src="./images/logos/GG WHITE.png" alt=""></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav ml-auto">
+			<ul class="navbar-nav ml-auto d">
+				<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#ourService" class="nav-link">Our Services</a></li>
+				<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+	<nav id="navbarTwo" class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed;top: 0;z-index: 9; width: 100%;">
+		<a class="navbar-brand " href="#"><img width="90px" src="./images/logos/GG_Logo BLACK.png" alt=""></a>
+		<button class="navbar-toggler navToggleButton" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto d">
 				<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
 				<li class="nav-item"><a href="#ourService" class="nav-link">Our Services</a></li>
 				<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
@@ -380,7 +393,7 @@
 			<div class="row align-middle row-of-card">
 				<div class="col-md-4">
 					<div class="card-box card p-0 m-1" style=" width: 100%;overflow: hidden;height: 50rem;">
-						<img style="width: 100%; height: 50%;object-fit: cover;" src="https://e0.pxfuel.com/wallpapers/565/127/desktop-wallpaper-business-stock-on-unsplash-group-meeting.jpg" alt="">
+						<img style="width: 100%; height: 43%;object-fit: cover;" src="https://e0.pxfuel.com/wallpapers/565/127/desktop-wallpaper-business-stock-on-unsplash-group-meeting.jpg" alt="">
 						<div style="position: relative; bottom: 7rem; right: 0; width: 100%; background-color: rgb(255, 255, 255);">
 							<h3 class=" text-center" style="color: black;">Expertise </br>
 								in Tailored Solutions
@@ -522,7 +535,7 @@
 		</div>
 	</section>
 
-	<section id="contact" style="padding-top:30rem;">
+	<section id="contact" >
 		<div class="cont-box d-flex justify-content-center align-items-center">
 			<div class="contact-box">
 				<div class="contact-links">
