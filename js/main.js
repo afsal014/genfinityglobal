@@ -321,9 +321,19 @@
 
 })(jQuery);
 
-function navbarAnimation() {
-	gsap.to("#logoOne", {
-		display: "block",
+function navAnimate(){
+	gsap.to("#navbarOne", {
+		display: "none",
+		scrollTrigger: {
+			trigger: "#page2",
+			scroller: "#main",
+			start: "top 0",
+			scrub: true,
+		},
+	});
+
+	gsap.to("#navbarTwo", {
+		display: "flex",
 		scrollTrigger: {
 			trigger: "#page2",
 			scroller: "#main",
@@ -332,5 +342,5 @@ function navbarAnimation() {
 		},
 	});
 }
-navbarAnimation();
+navAnimate()
 

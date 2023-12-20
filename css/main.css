@@ -193,10 +193,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top:20rem;
+}
+
+.logoTwo{
+  display: none;
+}
+
+#logoB{
+  display: none;
 }
 
 .cont-box{
   width: 100%;
+  height: 100%;
   background:url('https://img.decrypt.co/insecure/rs:fit:3840:0:0:0/plain/https://cdn.decrypt.co/wp-content/uploads/2023/06/jaldps_secretary_robot_attentively_taking_notes_at_a_round_table-gID_7.png@webp');
   object-fit: cover;
 }
@@ -387,6 +397,16 @@ textarea:valid+label {
   transform: rotate(10deg); /* Adjust the rotation angle as needed */
 }
 
+#navbarTwo{
+  display: none;
+}
+
+#hiddenLinks{
+  display: none;
+}
+/* #hiddenButton{
+  display: none;
+} */
 
 
 
@@ -424,6 +444,14 @@ textarea:valid+label {
 
   .row-of-card{
     height: 260vh;
+  }
+
+  #contact{
+    padding-top: 0;
+  }
+
+  #logoOne{
+    height: 80px;
   }
 }
 
