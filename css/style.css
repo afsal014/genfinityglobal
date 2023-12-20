@@ -63,6 +63,7 @@ body {
   background-color: #fff; 
   overflow-x: hidden;
   width: 100%;
+  background-color: #000;
 }
 
 [tabindex="-1"]:focus {
@@ -8798,7 +8799,7 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 7em 0;
+  padding-top: 7em;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
@@ -8816,7 +8817,7 @@ textarea.form-control {
 .ftco-footer {
   font-size: 16px;
   background: #000;
-  padding: 7em 0;
+  padding-top: 7em;
   z-index: 0; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
