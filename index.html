@@ -462,8 +462,22 @@
 								<li><a href="#"></a></li>
 								<li><a href="#"></a></li>
 								<li><a href="#"></a></li>
-								<li><a href="#"><span class="mx-3"><i class="fa-solid fa-arrow-up"></i></span><span
-											class="text" style="margin-left:1rem;font-size: 12px;">BACK TO TOP</span></a></li>
+								<li>
+									<a href="#"><span class="mx-3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-arrow-up"></i></span>
+										<spanclass="text" style="margin-left:1rem;font-size: 12px;" class="d-flex">
+										<div data-aos="flip-left" dat-aos-duration="1000">B</div>
+										<div data-aos="flip-left" dat-aos-duration="1200">A</div>
+										<div data-aos="flip-left" dat-aos-duration="1400">C</div>
+										<div data-aos="flip-left" dat-aos-duration="1600">K</div>
+										<div style="margin-left: 7px;" data-aos="flip-left" dat-aos-duration="1800">T</div>
+										<div data-aos="flip-left" dat-aos-duration="2000">O</div>
+										<div style="margin-left: 7px;" data-aos="flip-left" dat-aos-duration="2000">T</div>
+										<div data-aos="flip-left" dat-aos-duration="2000">O</div>
+										<div data-aos="flip-left" dat-aos-duration="2000">P</div>
+										<!-- BACK TO TOP -->
+										</span>
+									</a>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -483,10 +497,10 @@
 						<li class="ftco-animate"><a class="d-flex justify-content-center align-items-center"
 								target="_blank" href="https://twitter.com/GenfinityGlobal"><i
 									class="fa-brands fa-x-twitter"></i></a></li>
-						<li style="color: black;background-color: transparent;"  class="ftco-animate"><a class="d-flex justify-content-center align-items-center"
+						<li style="color: black;background-color: transparent;margin-left: -1.7rem;"  class="ftco-animate"><a class="d-flex justify-content-center align-items-center"
 								target="_blank" href="https://www.linkedin.com/company/genfinity-global/"><i
 									class="fab fa-linkedin "></i></a></li>
-						<li style="color: black;"  class="ftco-animate"><a class="d-flex justify-content-center align-items-center"
+						<li style="color: black;margin-left: -1.7rem;"  class="ftco-animate"><a class="d-flex justify-content-center align-items-center"
 								target="_blank" href="https://www.instagram.com/genfinityglobal/"><i
 									class="fab fa-instagram"></i></a></li>
 					</ul>
@@ -510,12 +524,22 @@
 	</div>
 
 	<!-- <script>
-		const scroller = new LocomotiveScroll({
-			el: document.querySelector('#main'),
-			smooth: true
-		});
+		function scrollToTop() {
+		  window.scrollTo({ top: 0, behavior: 'smooth' });
+		}
+	
+		window.onscroll = function() {
+		  var backToTopButton = document.getElementById("back-to-top");
+	
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			backToTopButton.classList.add("show", "fade-in");
+		  } else {
+			backToTopButton.classList.remove("show", "fade-in");
+		  }
+		};
 	</script> -->
 
+	
 	<!-- aos sciprt  -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
