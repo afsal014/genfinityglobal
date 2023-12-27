@@ -384,10 +384,11 @@ textarea:valid+label {
 
 
 .card-box img {
-  scale: 2;
+  scale: 1.3;
 }
 .card-box:hover img {
   transform: rotate(10deg); /* Adjust the rotation angle as needed */
+  scale: 1.5;
 }
 
 #navbarTwo{
